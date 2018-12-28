@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <style>
+
+        html{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            color: #848181;
+            font: 400 15px/1.5 "Lato", sans-serif;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #252525;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height:100vh; 
+        }
+        a{
+            text-decoration: none;
+            margin-top: 20px;
+            color: #b6b6b6;            
+        }
+        a:hover{
+            color: #ffe07a;  
+        }
+
+        #layer{
+            background-color: #000000;
+            width: 960px;
+            height: 640px; 
+                  
+        }
+    
+        #stage{
+            position:relative;
+            width: 1px;
+            height: 1px;
+            top: 50%;
+            left:50%;
+            perspective: 800px;
+            -webkit-perspective: 800px;
+        }
+
+        #content{
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        }
+
+        .panel{
+            position: absolute;
+            width:1px;
+            height:1px;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        }
+
+        .circle{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility:hidden;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        }
+
+
+
+
+        .sound-layer{
+            position: absolute;
+            width:100%;
+           
+        }
+
+        .bensound-link{
+        
+            display: block;
+            text-decoration: none;
+            margin-top: 10px;
+     
+        }
+
+        #button{
+         
+            width: 120px;
+            height: 29px;
+            border-radius: 10px;
+            margin: auto;
+            background-color: #2e2c2c;
+     
+           
+            position: relative;
+            top: 80%;
+            cursor: pointer;
+
+ 
+        }
+
+    </style>
+
+    <title>Demo</title>
+
+
+</head>
+<body>
+
+    
+ <p>Experimentation 3D javscript avec Audio API et CSS3</p>   
+    <div class="sound-layer">
+        <audio id="sound" preload="auto">
+            <source src="sounds/bensound_sexy.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+             
+    </div>
+ 
+
+    <div id="layer">
+        <div id="stage"></div>
+        <div id="button">PLAY</div>
+    </div>
+    <a class="bensound-link" href="https://www.bensound.com" target="blanck">Royalty Free Music from Bensound</a>    
+    
+
+    <script src="js/sphere3d.js"></script>
+
+
+
+    
+</body>
+</html>
