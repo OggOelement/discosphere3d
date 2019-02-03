@@ -30,7 +30,7 @@
 
         let audioCtx, analyser, bufferLength, dataArray, audioSourceNode;
 
-
+        //create audio context with analyser
         function createContextAudio(){
             audioCtx = new(window.AudioContext || window.webkitAudioContext)();
             analyser  = audioCtx.createAnalyser();
