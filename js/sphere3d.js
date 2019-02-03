@@ -192,7 +192,7 @@
         }
 
 
-
+        //animation with requestAnimationFrame
         function loop(){ 
             
             if(isPlay){
